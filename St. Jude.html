@@ -1,0 +1,840 @@
+<!-- 
+  HOW TO BUY A DOMAIN NAME AND PUBLISH THIS WEBSITE
+
+  1. Purchase a Domain Name:
+      - Go to a registrar like Namecheap, GoDaddy, or Google Domains.
+      - Search for your desired name, add it to your cart, and follow checkout steps.
+
+  2. Choose a Hosting Provider:
+      - Select a hosting service (Netlify, Vercel, GitHub Pages, or traditional hosts).
+      - For static HTML like this, Netlify and GitHub Pages are free/simple options.
+
+  3. Upload/Deploy Your Website:
+      - If using Netlify:
+         a. Sign up and log in to netlify.com.
+         b. Click "Add new site" → "Deploy manually".
+         c. Drag & drop this HTML file (and related files) or link your GitHub repo.
+      - If using GitHub Pages:
+         a. Create a new repository on github.com.
+         b. Upload this file (rename to `index.html`).
+         c. Go to repo > Settings > Pages, select branch for Pages, and save.
+         d. Your site will be at https://<your-username>.github.io/<repo-name>/
+
+  4. Connect Your Domain:
+      - In your hosting dashboard, look for Domain Management or Custom Domains.
+      - Add your purchased domain.
+      - Registrar will instruct you to set DNS records (nameservers or CNAME).
+      - Follow host's guide to connect; propagation may take up to 24h.
+
+  5. Done! Your site is live on your custom domain.
+
+  Pro Tip:
+    - Google "How to publish static website on [chosen host]" for detailed tutorials.
+    - Most hosts have step-by-step guides.
+    - Keep this file as `index.html` so it appears as your home page.
+-->
+
+
+
+
+
+
+
+
+<style>
+  body {
+    background: #84888e !important;  /* A lighter gray for main background */
+  }
+</style>
+
+
+
+
+<style>
+  /* Lower chart section even more for greater spacing from previous elements */
+  #chart-section,
+  .chart-section {
+    margin-top: 13em !important;
+  }
+</style>
+
+
+
+
+
+<style>
+  /* Refined Red Accent Palette */
+  :root {
+    --red-main: #e53935;
+    --red-dark: #ab2726;
+    --red-light: #fceaea;
+    --red-accent: #ff5c62;
+    --red-outline: #eed0d0;
+    --soft-pink: #fff5f8;
+    --red-gradient: linear-gradient(112deg, #fff5f8 20%, #fdf0f0 100%);
+    --pink-gradient: linear-gradient(110deg, #fbeef3 0%, #eaf7fc 100%);
+    --button-gradient: linear-gradient(90deg, #ff7f99 0%, #fae3e3 95%);
+  }
+
+  body {
+    background: var(--soft-pink);
+    color: #27222a;
+  }
+
+  a, a:visited {
+    color: var(--red-main);
+    text-decoration: none;
+    transition: color 0.14s;
+  }
+  a:hover, a:active {
+    color: var(--red-accent);
+    text-shadow: 0 0 5px #fdd3d3;
+  }
+
+  /* Header */
+  header {
+    background: #fff !important;
+    border-bottom: 1.8px solid var(--red-outline) !important;
+    box-shadow: 0 2px 8px #ffbdbd22 !important;
+  }
+  header nav li a {
+    color: var(--red-main) !important;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    border-radius: 0.14em;
+    margin-right: 0.18em;
+    transition: border-bottom 0.16s, background 0.18s;
+  }
+  header nav li a:hover {
+    border-bottom: 2px solid var(--red-accent);
+    background: #fff8f8;
+  }
+  header nav li:last-child a {
+    background: var(--button-gradient) !important;
+    color: #fff !important;
+    border-radius: 0.54em !important;
+    box-shadow: 0 2px 10px #fd647220;
+    border-bottom: none !important;
+  }
+  header nav li:last-child a:hover {
+    background: linear-gradient(90deg, #ffb3c5 0%, #fd9da9 100%) !important;
+    color: #fff;
+    box-shadow: 0 2px 9px #ffd2cfb4;
+  }
+
+  /* Section backgrounds/containers */
+  .chart-section {
+    background: var(--red-gradient) !important;
+    border: 1.5px solid var(--red-outline);
+    box-shadow: 0 0 8px #eb919120;
+    border-radius: 1.2em;
+  }
+  section#about {
+    background: var(--pink-gradient) !important;
+    border: 1.5px solid var(--red-outline);
+    box-shadow: 0 2px 15px #f4b9ca18;
+  }
+  .creator-rewards-section {
+    background: #fff9fa !important;
+    box-shadow: 0 0 11px #ffdee94c !important;
+    border: 1.5px solid var(--red-outline);
+  }
+  .rewards-section {
+    background: linear-gradient(113deg, #fff6f7 15%, #ecf7f4 93%) !important;
+    border-radius: 1.15em;
+    box-shadow: 0 2px 16px #f6c1d720;
+    border: 1.5px solid var(--red-outline);
+    padding: 1em 1.2em 1.5em 1.2em;
+    margin: 2em auto 1em auto;
+    max-width: 680px;
+  }
+
+  .section-title {
+    color: var(--red-main) !important;
+    text-shadow: 1px 2px 8px #ffd3e580;
+  }
+  .creator-rewards-section h3 {
+    color: var(--red-accent) !important;
+    text-shadow: 0 2px 6px #fcaaf055;
+  }
+
+  /* Call To Action button */
+  .rewards-section a[href*="pump.fun"] {
+    background: var(--button-gradient) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 12px #fdd3df3a !important;
+    border: 1.5px solid var(--red-outline);
+    font-weight: 700 !important;
+    transition: background 0.15s, transform 0.16s, box-shadow 0.14s;
+  }
+  .rewards-section a[href*="pump.fun"]:hover {
+    background: linear-gradient(90deg, #ffb9bb 10%, #ff8ca9 100%) !important;
+    transform: scale(1.022);
+    box-shadow: 0 3px 18px #fcaaf057;
+  }
+
+  /* Panel highlight */
+  .creator-rewards-section,
+  .rewards-section,
+  .chart-section,
+  section#about {
+    border: 1.5px solid var(--red-outline) !important;
+    box-shadow: 0 2px 10px #f490c820;
+  }
+
+  /* Mild Glow Animation */
+  @keyframes lightRedGlowPulse {
+    0% { box-shadow: 0 0 14px 2px #ffd7e133, 0 2px 15px #f8a3ad13;}
+    50% { box-shadow: 0 0 23px 7px #ffd4eacc, 0 2px 18px #fbe0ed14;}
+    100% { box-shadow: 0 0 14px 2px #ffd7e133, 0 2px 15px #f8a3ad13;}
+  }
+  .creator-rewards-section,
+  .rewards-section,
+  .chart-section,
+  section#about {
+    animation: lightRedGlowPulse 4.5s ease-in-out infinite alternate;
+  }
+
+  /* List touch-up */
+  ul {
+    border-left: 2.5px solid var(--red-main);
+    background: #fffafb;
+    border-radius: 0.22em;
+    padding: 1.05em 1em 1.05em 1.5em;
+    margin-top: 1em;
+  }
+  ul li {
+    margin-bottom: 0.5em;
+    color: var(--red-dark) !important;
+  }
+
+  b, strong {
+    color: var(--red-accent);
+  }
+
+  /* Price/Progress Chart */
+  .chart-section .section-title, .chart-section .section-title * {
+    color: var(--red-main) !important;
+    font-weight: 900;
+    text-shadow: 0 2px 8px #ffd9d380;
+  }
+  .chart-iframe {
+    border: 1.5px solid var(--red-outline) !important;
+    box-shadow: 0 0 8px #ffdbe4cc !important;
+    border-radius: 1em;
+  }
+
+  /* Responsive - Soft Pink BG */
+  @media (max-width: 700px) {
+    .creator-rewards-section,
+    .rewards-section,
+    .chart-section,
+    section#about {
+      background: #fff6fa !important;
+      border-width: 1.1px !important;
+      box-shadow: 0 2px 8px #fcd3ce63 !important;
+    }
+    body {
+      background: #fff4f4 !important;
+    }
+  }
+
+  /* Decorative/Novelty */
+  .confetti {
+    background: var(--red-accent) !important;
+    opacity: 0.12 !important;
+    box-shadow: 0 1px 8px #f857577e;
+  }
+  .bg-sparkle {
+    background: #fff4fb !important;
+    box-shadow: 0 2px 11px #ff466e3c;
+  }
+  .floating-coin {
+    filter: drop-shadow(0 2.5px 11px #ffceda) drop-shadow(0 2px 7px #ffb6ca77) !important;
+    opacity: 0.80 !important;
+    mix-blend-mode: lighten;
+    border: 1.5px solid #ffdbe4a8;
+    border-radius: 50%;
+    transition: border 0.18s;
+  }
+  .floating-coin:hover {
+    border: 2px solid #ffd7ea;
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 3px 12px #ffb6bdcc;
+  }
+
+  /* Notices */
+  .rewards-section > div[style*="color:#ca5951"],
+  .rewards-section > p[style*="color:#2b7a7c"] {
+    color: var(--red-main) !important;
+    background: #fff0f3e0;
+    border-radius: 0.30em;
+    padding: 0.72em 0.94em 0.61em 1em;
+    margin: 1em auto 0.1em auto;
+    font-weight: 600;
+    box-shadow: 0 2px 7px #ffffff16;
+  }
+
+  h2, h3, .section-title {
+    text-shadow: 0 2px 8px #fec0cb22;
+    color: var(--red-main) !important;
+  }
+</style>
+
+
+
+<style>
+  /* Make section backgrounds a bit darker for improved contrast */
+  .chart-section {
+    background: linear-gradient(110deg,#c6e4f5 8%,#c3e7c3 100%) !important;
+  }
+  section#about {
+    background: linear-gradient(111deg, #d0f5e7 60%, #93c8ec 100%) !important;
+  }
+  .creator-rewards-section {
+    background: #e8f0ee !important;
+  }
+  .rewards-section {
+    background: linear-gradient(113deg, #f4e6e8 10%, #e9f5f2 90%) !important;
+    border-radius: 1.2em;
+    box-shadow: 0 2px 33px #e87faf20;
+    padding: 1em 1.2em 1.5em 1.2em;
+    margin: 2em auto 1em auto;
+    max-width: 680px;
+  }
+</style>
+
+<div style="width:100%;display:flex;justify-content:center;align-items:center;margin:4.6em 0 3.3em 0;">
+  <!-- Biggest St. Jude logo, directly under header using latest provided image -->
+  <div style="width:100%;display:flex;justify-content:center;align-items:center;margin:1.3em 0 1.0em 0;position:relative;">
+    <img src="Downloads/St.-Jude-11-removebg-preview.png"
+         alt="St. Jude Children's Hospital Logo"
+         style="
+           width: min(99vw,2800px);
+           max-width:2800px;
+           min-width:700px;
+           height:auto;
+           filter:drop-shadow(0 30px 120px #ff5acd80);
+           opacity:1;
+           display:block;
+           margin-top:0;
+         ">
+  </div>
+</div>
+
+
+<section id="about" style="max-width: 720px; margin: 5em auto 2.1em auto; background: linear-gradient(111deg, #eefaed 60%, #b9dbfa 100%); border-radius: 1.8em; box-shadow: 0 8px 40px #53c3cc24; padding: 2.6em 2em 2.2em 2em; position: relative;">
+  <div class="section-title" style="color:#389687;font-size:2.06em; font-weight:900; text-shadow:0 3px 18px #acf3ff60;">
+    About $Jude
+  </div>
+  <div style="font-size:1.18em; color:#15314b; line-height:1.7; margin-bottom:1.3em;">
+    <p style="margin-bottom:1.45em;">
+      <b>$Jude is a unique project on Solana that isn't just about receiving, it is about giving. It's not just a memecoin, it makes a difference.</b>
+    </p>
+    <p style="margin-bottom:1.25em;">
+      Every transaction with $Jude directs the creator rewards straight to <b>St. Jude Children’s Research Hospital</b>. That means each buy or sell contributes directly to aiding children in need, funding groundbreaking medical research, and supporting families with compassion.
+    </p>
+    <p style="margin-bottom:1.15em;">
+      Inspired by the power of <span style="color:#f74aa8;font-weight:600;">community</span> and the fun of <span style="color:#389687;font-weight:600;">crypto culture</span>, $Jude lets you join an energetic movement that puts generosity, fun, and hope at its heart. <span style="color:#664bec;">Trade and meme together,</span> knowing your impact is very real.
+    </p>
+    <ul style="margin:1.7em 0 1.4em 2.3em; color:#277ca1;">
+
+      <li>Transparent, on-chain donations to the official St. Jude website Solana wallet</li>
+      <li>Inclusive, meme-loving, & supportive community</li>
+      <li>Trade and help save lives at the same time!</li>
+    </ul>
+    <p style="margin-top:2em; font-weight:500; color:#2e737c;">
+      Join us as we show the world crypto can be <span style="color:#ff5acd;font-weight:700;">fun</span> <span style="color:#389687;">and</span> <span style="color:#ffde59;font-weight:700;">life-changing.</span>
+      <br>
+      <span style="font-size:1.14em;color:#23abb1;font-weight:800;">#JudeDidThat ✨</span>
+    </p>
+  </div>
+  <div style="position:absolute;bottom:1.3em;right:1.4em;opacity:0.23;">
+    <img src="Downloads/St-Jude-Symbol.png" alt="St Jude Logo" style="height:56px;">
+  </div>
+</section>
+
+<style>
+  .stjude-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 68vw;
+    max-width: 900px;
+    min-width: 320px;
+    height: auto;
+    opacity: 0.15;
+    filter:
+      blur(0.7px)
+      drop-shadow(0 0 180px #ff5acd66)
+      drop-shadow(0 4px 44px #1ce8da55)
+      brightness(1.13);
+    transform: translate(-50%, -51%) scale(1.08) rotate(-6deg);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.45s;
+    image-rendering: auto;
+  }
+  @media (max-width: 640px) {
+    .stjude-bg {
+      width: 96vw;
+      min-width: 0;
+      max-width: 99vw;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -51%) scale(1.04) rotate(-5deg);
+    }
+  }
+</style>
+<img
+  src="Downloads/St-Jude-Symbol.png"
+  alt="St. Jude Symbol (background)"
+  class="stjude-bg"
+  style="filter:
+    blur(0.7px)
+    drop-shadow(0 0 180px #970f27cc) /* even more dark red */
+    drop-shadow(0 4px 44px #1ce8da55)
+    brightness(1.13);
+  "
+/>
+
+
+
+
+<style>
+  body {
+    /* Make the background base color noticeably darker */
+    background:
+      radial-gradient(circle at 25% 18%, #ff5acd 0%, #43e1eb 34%, #ffde59 65%, #6affc7 85%, #7b6aff 100%);
+    background-color: #232a39; /* much darker than white, deep blue-charcoal */
+    background-blend-mode: multiply;
+    background-size: 400% 400%;
+  }
+  /* Make all text bold on the body. */
+  body, body * {
+    font-weight: bold !important;
+  }
+</style>
+
+
+
+
+
+<style>
+  /* Fun, dark(ish) gradients or multi-tone shadows for title texts */
+  .section-title,
+  .section-title h2 {
+    color: #1e232b !important;
+    background: linear-gradient(90deg, #213f62 25%, #15676e 55%, #800e7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow:
+      0 2px 20px #cabaff80,
+      0 1px 0 #0008; 
+    font-weight: 900;
+    letter-spacing: 0.01em;
+  }
+  .chart-section .section-title {
+    color: #172941 !important;
+    background: linear-gradient(90deg, #211e42, #15707c 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow:
+      0 2px 12px #168be5a0,
+      0 1px 0 #0009;
+    font-weight: 900;
+  }
+  .creator-rewards-section h3 {
+    color: #284e48 !important;
+    background: linear-gradient(90deg, #284e48 0%, #214f62 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow:
+      0 3px 18px #8dd6ff90,
+      0 1px 0 #0007;
+    font-weight: 900;
+  }
+</style>
+
+
+
+<style>
+  body {
+    /* Ultra-psychedelic animated, swirling, multi-gradient galaxy */
+    background:
+      repeating-radial-gradient(circle at 51% 37%, #fff27210 0px, #ff5acd 16%, #ff85ba 33%, #43e1eb 45%, #ffde59 49%, #6affc7 62%, #7b6aff 70%, #f0f 95%),
+      repeating-conic-gradient(from 120deg at 43% 54%, #ff5acd 0%, #ffde59 25%, #b4ff7d 44%, #43e1eb 61%, #7b6aff 73%, #ff5acd 100%),
+      linear-gradient(125deg, #ff5acd 0%, #43e1eb 35%, #ffde59 60%, #6affc7 80%, #7b6aff 100%);
+    background-blend-mode: lighten, screen, normal;
+    background-size: 275% 275%, 460% 460%, 400% 400%;
+    animation:
+      neonBgMove 8.8s linear infinite alternate,
+      swirlBg 13s linear infinite alternate-reverse;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  @keyframes neonBgMove {
+    0% {background-position: 10% 0%;}
+    20% {background-position: 90% 80%;}
+    40% {background-position: 50% 50%;}
+    60% {background-position: 0% 80%;}
+    80% {background-position: 100% 100%;}
+    100% {background-position: 10% 0%;}
+  }
+
+  /* Animated confetti for extra fun */
+  .confetti {
+    position: fixed;
+    top: -16px;
+    width: 26px;      /* made bigger */
+    height: 26px;     /* made bigger */
+    z-index: 31;      /* on top of most things */
+    opacity: 1;       /* fully visible */
+    pointer-events: none;
+    animation: fallConfetti linear infinite;
+    border-radius: 4px;                         /* rounded for fun/shine */
+    box-shadow:
+      0 0 11px 3px #fffde699,                   /* strong neon outer glow */
+      0 2px 8px #ff99e4cc,                      /* pinkish highlight */
+      0 0 0 4px #fff2;                          /* subtle bloom halo */
+    border: 2px solid #fff7; /* white border to help pop on any bg */
+    filter: brightness(1.25) saturate(1.5) drop-shadow(0 0 9px #fff2);
+    transition: opacity 0.4s;
+    outline: 1px solid #fff7;
+    outline-offset: -2px;
+  }
+  /* Random colors and angles for confetti */
+  .confetti.c1 { background: linear-gradient(145deg,#ff85ba,#fff5); left: 5vw;  animation-duration: 4.8s; animation-delay: 1s; transform: rotate(23deg);}
+  .confetti.c2 { background: linear-gradient(143deg,#33ffd8 80%,#fff8 100%); left: 44vw; animation-duration: 5.8s; animation-delay: 0.7s; transform: rotate(88deg);}
+  .confetti.c3 { background: linear-gradient(127deg,#ffde59,#fff9); left: 16vw; animation-duration: 3.7s; animation-delay: 2.2s; transform: rotate(48deg);}
+  .confetti.c4 { background: linear-gradient(131deg,#7b6aff 60%,#dbe6ff 130%); left: 82vw; animation-duration: 5.1s; animation-delay: 1.3s; transform: rotate(15deg);}
+  .confetti.c5 { background: linear-gradient(120deg,#ff5acd 80%,#fff6 110%); left: 71vw; animation-duration: 4.5s; animation-delay: 0s;  transform: rotate(-45deg);}
+  .confetti.c6 { background: linear-gradient(115deg,#23abb1 85%,#e7fdff 110%); left: 33vw; animation-duration: 4.6s; animation-delay: 2s; transform: rotate(-25deg);}
+  .confetti.c7 { background: linear-gradient(130deg,#fa6dca 75%,#fff7 130%); left: 61vw; animation-duration: 5.5s; animation-delay: 2.3s; transform: rotate(65deg);}
+  .confetti.c8 { background: linear-gradient(141deg,#b4ff7d 92%,#fffde7 150%); left: 19vw; animation-duration: 4.2s; animation-delay: 1.9s; transform: rotate(-8deg);}
+  .confetti.c9 { background: linear-gradient(137deg,#ff85ba,#fff6); left: 90vw; animation-duration: 5.7s; animation-delay: 0.8s; transform: rotate(10deg);}
+  .confetti.c10{ background: linear-gradient(129deg,#c1bfff,#fff9 120%); left: 57vw; animation-duration: 3.4s; animation-delay: 1.4s; transform: rotate(-93deg);}
+
+  @keyframes fallConfetti {
+    0%   { top: -28px; opacity: 1;}
+    8%   { transform: scale(1.35) rotate(-10deg);}
+    18%  { filter: brightness(2) saturate(2) blur(.2px);}
+    22%  { opacity: 1; }
+    80%  { opacity: 0.98;}
+    100% { top: 115vh; opacity: 0;}
+  }
+
+  /* Glow pulse around chart section */
+  .chart-section {
+    box-shadow:
+      0 0 25px 2px #ff5acdbb,
+      0 0 80px 10px #43e1eb55,
+      0 2px 33px #23abb11c;
+    animation: glowPulse 2.5s ease-in-out infinite alternate;
+  }
+  @keyframes glowPulse {
+    from { box-shadow:
+      0 0 25px 2px #ff5acd99,
+      0 0 70px 10px #43e1eb41,
+      0 2px 33px #23abb11c;
+    }
+    to {
+      box-shadow:
+      0 0 51px 8px #ffe75cde,
+      0 0 110px 24px #fa6dcaaa,
+      0 2px 40px #23abb11c;
+    }
+  }
+  /* Meme coins float, spin, bounce, and have fun! */
+  .floating-coin {
+    position: fixed;
+    width: 58px;
+    height: 58px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.70;
+    mix-blend-mode: lighten;
+    filter: drop-shadow(0 2.5px 18px #ffe797) drop-shadow(0 2px 9px #ff85ba77);
+    animation: floatCoin 10s cubic-bezier(.58,-0.11,.73,1.14) infinite, spinCoin 6s linear infinite;
+    transition: opacity 0.5s;
+    will-change: transform;
+  }
+  .floating-coin.coin2 { left: 18vw; top: 6vh; animation-duration: 13.2s, 8.4s; animation-delay: 3s, 1s; transform: scale(0.85);}
+  .floating-coin.coin3 { right: 9vw; top: 23vh; animation-duration: 22s, 6.8s; animation-delay: 7s, 0s; transform: scale(1.18);}
+  .floating-coin.coin4 { left: 8vw; bottom: 21vh; animation-duration: 13.9s, 4.4s; animation-delay: 1s, 0.5s;}
+  .floating-coin.coin5 { right: 19vw; bottom: 17vh; animation-duration: 16.5s, 7.2s; animation-delay: 5s, 2.2s;}
+  .floating-coin.coin6 { left: 45vw; top: 3vh; animation-duration: 10.2s, 5.2s; animation-delay: 4s, .7s;}
+  .floating-coin.coin7 { right: 33vw; bottom: 11vh; animation-duration: 14.5s, 6s; animation-delay: 8s, 1.3s;}
+  @keyframes floatCoin {
+    0%   { transform: translateY(0) scale(1);}
+    12%  { transform: translateY(-28px) scale(1.01);}
+    37%  { transform: translateY(-110px) scale(1.13);}
+    48%  { transform: translateY(-70px) scale(1.08);}
+    65%  { transform: translateY(-140px) scale(1.2);}
+    100% { transform: translateY(0) scale(1);}
+  }
+  @keyframes spinCoin {
+    0% { transform: rotateY(0deg);}
+    98% {transform: rotateY(360deg);}
+    100%{transform: rotateY(0deg);}
+  }
+  /* Add crazy disco sparkles */
+  .bg-sparkle {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.64;
+    filter: blur(1.5px) brightness(1.45);
+    animation: sparkleMove 9s cubic-bezier(.83,-0.14,.68,1.1) infinite;
+    z-index: 2;
+  }
+  .bg-sparkle.s1 { width:24px; height:24px; background:#fff8; left:40vw; top:19vh; animation-duration:9s; animation-delay:2s;}
+  .bg-sparkle.s2 { width:13px; height:13px; background:#ffd84abb; left:10vw; top:45vh; animation-duration:8s; animation-delay:1s;}
+  .bg-sparkle.s3 { width:17px; height:17px; background:#cf47eeb3; left:61vw; top:35vh; animation-duration:8.5s; animation-delay:4.5s;}
+  .bg-sparkle.s4 { width:21px; height:21px; background:#7b6aff; left:78vw; top:21vh; animation-duration:11s; animation-delay:2.8s;}
+  .bg-sparkle.s5 { width:19px; height:19px; background:#f8ff91; left:81vw; top:66vh; animation-duration:7.7s; animation-delay:1.3s;}
+  @keyframes sparkleMove {
+    0%   { opacity: 0.64; transform: scale(0.86);}
+    14%  { opacity: 1;}
+    23%  { opacity: 0.82; transform: scale(1);}
+    37%  { opacity: 0.61;}
+    59%  { opacity: 1;}
+    72%  { opacity: 0.24; transform: scale(1.10);}
+    100% { opacity: 0.64; transform: scale(0.86);}
+  }
+</style>
+<!-- Confetti explosion! -->
+<div class="confetti c1"></div><div class="confetti c2"></div><div class="confetti c3"></div><div class="confetti c4"></div><div class="confetti c5"></div>
+<div class="confetti c6"></div><div class="confetti c7"></div><div class="confetti c8"></div><div class="confetti c9"></div><div class="confetti c10"></div>
+<!-- Disco sparkles! -->
+<div class="bg-sparkle s1"></div><div class="bg-sparkle s2"></div><div class="bg-sparkle s3"></div><div class="bg-sparkle s4"></div><div class="bg-sparkle s5"></div>
+<!-- Crazy, dancing meme coins from popular memes! -->
+<img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=031" class="floating-coin" style="left:5vw;top:15vh;">
+<img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=031" class="floating-coin coin2" alt="Shiba Inu">
+<img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=031" class="floating-coin coin3" alt="Pepe">
+<img src="https://cryptologos.cc/logos/floki-inu-floki-logo.png?v=031" class="floating-coin coin4" alt="Floki">
+<img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=031" class="floating-coin coin5" alt="Kishu">
+<img src="https://cryptologos.cc/logos/banana-banana-logo.png?v=031" class="floating-coin coin6" alt="Banana">
+<img src="https://cryptologos.cc/logos/cake-cake-logo.png?v=031" class="floating-coin coin7" alt="Cake">
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>$Jude | St. Jude</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Barlow', Arial, sans-serif;
+      background: #f8fafd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .chart-section {
+      margin: 2.4em auto 1.4em auto;
+      background: linear-gradient(110deg,#ecf8fe 8%,#e3f3e3 100%);
+      border-radius: 1.3em;
+      box-shadow: 0 2px 33px #23abb11c;
+      padding: 1.1em 1.2em 1.6em 1.2em;
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+    }
+    .section-title {
+      color: #26abb1;
+      margin-bottom: 0.56em;
+      margin-top: 0.6em;
+      font-size: 1.6em;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 16px #d4f3e14d;
+    }
+    .chart-iframe {
+      display: block;
+      width: 100%;
+      min-height: 440px;
+      border: none;
+      border-radius: 1.1em;
+      overflow: hidden;
+      box-shadow: 0 2px 10px #e0baff41;
+      margin: auto;
+    }
+    @media (max-width: 750px) {
+      .chart-section { max-width:98vw; padding:0.7em; }
+      .chart-iframe { min-height: 320px;}
+    }
+  </style>
+</head>
+
+<header style="width:100%;background:#fff;border-bottom:2px solid #e8f3f7;box-shadow:0 2px 10px #e6ecef1f;position:fixed;top:0;left:0;z-index:1000;">
+  <nav style="max-width:960px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0.8em 2em;">
+    <div style="font-size:1.6em;font-weight:bold;color:#23abb1;letter-spacing:0.02em;">
+      $Jude  -  St. Jude 
+    </div>
+    <li><a href="#about" style="color:#1a8b92;text-decoration:none;font-weight:600;">About</a></li>
+      <li><a href="#rewards" style="color:#1a8b92;text-decoration:none;font-weight:600;">Donations/Rewards</a></li>
+      <li><a href="https://x.com/i/communities/1994531403078471957" target="_blank" style="color:#1a8b92;text-decoration:none;font-weight:600;">Community link to X</a></li>
+      <li><a href="#chart-section" style="color:#1a8b92;text-decoration:none;font-weight:600;">Live Chart</a></li>
+      <li><a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=EExiSRvSFe5c6HyNKM1hiSx2byqXftKS3TJxefRBpump" target="_blank" style="color:#fff;background:#23abb1;border-radius:0.6em;padding:0.45em 1.15em;text-decoration:none;font-weight:700;transition:background 0.2s;">Buy $Jude</a></li>
+    </ul>
+  </nav>
+</header>
+<div style="height:4.6em;"><!-- Spacer for fixed header --></div>
+
+
+
+
+
+
+
+
+
+<body>
+  <section id="rewards"
+  <div class="creator-rewards-section" style="margin-top:2.8em; background:#f3faf9; border-radius:1.2em; padding:1.3em 1em 1.1em 1em; max-width:590px; width:100%; text-align:center; box-shadow:0 4px 18px #11998e12;">
+    <h3 style="color:#2abca1; font-size:1.25em; font-weight:800; margin-bottom:0.73em;">Creator Rewards</h3>
+
+    <p style="color:#199e6e; font-size:1em; margin-bottom:0.2em;">
+      We coordinated with pump.fun so the creator wallet is the same wallet that receives Solana donations on St. Jude's official website
+    </p>
+  </div>
+</section>
+
+
+  <style>
+    .creator-rewards-section {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      /* match glowing outline of chart-section */
+      box-shadow:
+        0 0 25px 2px #ff5acdbb,
+        0 0 80px 10px #43e1eb55,
+        0 2px 33px #23abb11c;
+      animation: glowPulse 2.5s ease-in-out infinite alternate;
+      transition: box-shadow 0.7s;
+    }
+    @media (max-width: 700px) {
+      .creator-rewards-section {
+        max-width: 97vw !important;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+    }
+  </style>
+
+
+  <div class="rewards-section">
+    <div class="section-title">
+      <h2 style="color: #15676e; text-shadow: 1px 2px 10px #143b3b80;">Check Rewards Progress!</h2>
+    </div>
+    <div style="margin: 2em 0;">
+      <p style="font-size:1.1em; color:#2b7a7c; margin-bottom:1.2em; text-align:center;">
+        <b>View the donations St. Jude has received so far:</b>
+      </p>
+      <a
+        style="display:flex;justify-content:center;margin:0 0 1em 0;"
+        >
+          <a
+            href="https://pump.fun/profile/ByEVjgLxQrQdfSWnMMubV6GfuN7zgyoTnD2ayhSDkK7y?tab=coins" 
+            target="_blank"
+            rel="noopener"
+            style="
+              display:block;
+              margin-left:auto;
+              margin-right:auto;
+              background: linear-gradient(90deg, #1ce8da 0%, #29b4ef 95%);
+              color:white;
+              font-weight:700;
+              padding:1em 2.4em;
+              border-radius: 2.3em;
+              font-size:1.1em;
+              text-decoration:none;
+              box-shadow: 0 2px 18px #21b4cf2c;
+              transition: background 0.14s;
+              text-align:center;
+              max-width: fit-content;
+            "
+          >
+            Go to Creator Rewards on Pump.fun 
+          </a>
+      </a>
+      <div style="color:#ca5951;font-size:0.98em;margin-top:1.5em;">
+      </div>
+    </div>
+  </div>
+
+  <section id="how-to-buy" style="max-width:720px; margin:7em auto 2.3em auto; background: linear-gradient(109deg, #f2faff 60%, #f1efff 100%); border-radius: 1.8em; box-shadow: 0 8px 32px #abe2fb30; padding:2.4em 2em 2.2em 2em; position:relative;">
+    <div class="section-title" style="color:#15676e;font-size:1.65em;font-weight:900; text-shadow:0 2px 12px #bcdff3a0;">
+      How to Get $Jude
+    </div>
+    <div style="font-size:1.13em; color:#143a54; line-height:1.72;">
+      <ol style="margin:2em 0 1.7em 2.1em; color:#278fa2;">
+        <li style="margin-bottom:1.6em;">
+          <b>Download a Phantom Wallet:</b><br>
+          Go to <a href="https://phantom.app/download" target="_blank" rel="noopener" style="color:#ff5c62;font-weight:700;">phantom.app/download</a> and install the Phantom browser extension or mobile app. Create a wallet and securely back up your recovery phrase.
+        </li>
+        <li style="margin-bottom:1.6em;">
+          <b>Get Solana (SOL):</b><br>
+          Fund your wallet by purchasing SOL from an exchange (like Coinbase, Binance, or Kraken) and sending it to your Phantom wallet address.
+        </li>
+        <li style="margin-bottom:1.6em;">
+          <b>Swap SOL for $Jude on Pump.fun:</b><br>
+          Visit <a href="https://swap.pump.fun/" target="_blank" rel="noopener" style="color:#ff5c62;font-weight:700;">swap.pump.fun</a>.<br>
+          Paste the $Jude token address:<br>
+          <code style="background:#f6edff; color:#233b59; padding:0.19em 0.5em; border-radius:0.3em; word-break:break-all; display:inline-block;">BAMFW89APvkNYztdPFZQKK52bjQot3FnFBCACE9TVtAQ</code><br>
+          Swap your SOL for $Jude in a few clicks!
+        </li>
+        <li>
+          <b>Celebrate &amp; Join the Community!</b><br>
+          You're now a $Jude holder! Consider following our socials and joining our meme-loving community for updates and fun.
+        </li>
+      </ol>
+      <div style="display:flex; flex-wrap:wrap; gap:1.2em 2em; justify-content:center; margin-top:1.8em;">
+        <a href="https://phantom.app/download" target="_blank" rel="noopener"
+          style="background:linear-gradient(90deg,#7cf2ff 0%,#b595ff 90%);color:#153a4b;font-weight:700;padding:0.74em 2em;border-radius:2.2em;font-size:1em;box-shadow:0 2px 14px #a2e1fc2b;text-decoration:none;transition:background 0.14s;">
+          Get Phantom Wallet
+        </a>
+        <a href="https://swap.pump.fun/?token=BAMFW89APvkNYztdPFZQKK52bjQot3FnFBCACE9TVtAQ&input=So11111111111111111111111111111111111111112&output=EExiSRvSFe5c6HyNKM1hiSx2byqXftKS3TJxefRBpump" target="_blank" rel="noopener"
+          style="background:linear-gradient(90deg,#ff5acd 0%,#ff9dfc 90%);color:#fff;font-weight:700;padding:0.74em 2em;border-radius:2.2em;font-size:1em;box-shadow:0 2px 14px #ff9dfc2b;text-decoration:none;transition:background 0.15s;">
+          Swap SOL for $Jude
+        </a>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:1.2em;right:1.1em;opacity:0.09;">
+      <img src="https://seeklogo.com/images/P/phantom-wallet-logo-225117D440-seeklogo.com.png" alt="Phantom Logo" style="height:58px;">
+    </div>
+  </section>
+
+  <section id="chart-section"
+  <div class="chart-section">
+    <div class="section-title">Live $Jude Price Chart</div>
+    <iframe
+      src="https://dexscreener.com/solana/bamfw89apvknyztdpfzqkk52bjqot3fnfbcace9tvtaq?tab=chart&embed=1"
+      style="width:100%; min-height:700px; border:0; border-radius:12px; overflow:hidden;"
+      allow="clipboard-write"
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      loading="lazy"
+      class="chart-iframe"
+      title="Live Solana $JUDE Chart">
+    </iframe>
+  </div>
+</section>
+</body>
+</html>
